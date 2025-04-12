@@ -1,0 +1,7 @@
+---
+hosts: all
+become: true
+remote_user: root
+
+tasks:
+- name: Ensure apache is at its latest version
