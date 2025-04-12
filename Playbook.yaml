@@ -5,3 +5,11 @@ remote_user: root
 
 tasks:
 - name: Ensure apache is at its latest version
+  ansible.builtin.yum
+     name: httpd
+     state: latest
+
+- name: Write apache config file
+  ansible.builtin.tempalate:
+    src: /srv/httpd.j2
+    dest: /etc/httpd.conf
