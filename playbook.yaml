@@ -9,7 +9,7 @@
     - name: Create EC2 instances
       amazon.aws.ec2_instance:
         name: "ansible-instance"
-        key_name: "Ansible-Managed"
+        key_name: "Jenkins11"
         instance_type: t2.micro
         security_group: launch-wizard-1
         region: ap-south-1
@@ -17,7 +17,7 @@
         aws_secret_key: "{{ ec2_secret_key }}"
         network:
           assign_public_ip: true
-        image_id: ami-0e35ddab05955cf57
+        image_id: ami-084568db4383264d4
         tags:
           Environment: Testing
 
