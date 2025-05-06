@@ -17,8 +17,12 @@
         aws_secret_key: "{{ ec2_secret_key }}"
         network:
           assign_public_ip: true
-        image_id: ami-0e35ddab05955cf57
-        tags:
-          Environment: Testing
+        image_id: "{{ item }}"
+      loop:
+        - "ami-062f0cc54dbfd8ef1"
+        - "ami-0e35ddab05955cf57"
+        - "ami-0e35ddab05955cf57"
+
+        
 
 
