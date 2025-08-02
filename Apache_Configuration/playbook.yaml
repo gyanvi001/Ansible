@@ -1,0 +1,19 @@
+---
+# This playbook installs Apache on the web server
+- name: Install Apache on web server
+  hosts: webservers
+  become: yes
+
+  tasks:
+    # Ensure Apache is installed
+    - name: Install Apache package
+      apt:
+        name: apache2
+        state: present
+
+    # Start the Apache service
+    - name: Start Apache service
+      service:
+        name: apache2
+        state: started
+        enabled: yes
