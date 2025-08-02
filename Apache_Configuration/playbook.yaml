@@ -9,7 +9,8 @@
     - name: Install Apache package
       apt:
         name: apache2
-        state: absent
+        state: present
+        msg: Install Apache package
 
     # Start the Apache service
     - name: Start Apache service
